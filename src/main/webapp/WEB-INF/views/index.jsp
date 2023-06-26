@@ -6,6 +6,9 @@
 </head>
 <body>
 <h1>Hello World! from MVC</h1>
+<div>
+    <img src="/assets/img/빵빵이.png" />
+</div>
 
 </body>
 </html>
