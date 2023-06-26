@@ -34,6 +34,7 @@
             <version>${org.springframework-version}</version>
         </dependency>
 
+
         <!-- web, jstl -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -58,7 +59,8 @@
             <version>1.2.5</version>
         </dependency>
 
-        <!-- logging -->
+
+        <!-- logging-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
@@ -84,6 +86,14 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${log4j.version}</version>
+        </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
