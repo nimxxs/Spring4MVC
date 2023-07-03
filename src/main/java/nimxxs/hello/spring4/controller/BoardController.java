@@ -1,5 +1,6 @@
 package nimxxs.hello.spring4.controller;
 
+import nimxxs.hello.spring4.model.Board;
 import nimxxs.hello.spring4.service.BoardService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,6 +24,8 @@ public class BoardController {
         logger.info("board/list 호출!!");
 
         m.addAttribute("boards", bsrv.readBoard(cpg));
+       // m.addAttribute("psnum",????);   // 페이지네이션 시작번호
+       // m.addAttribute("allpg",????);   // 총 페이지 수
 
         return "board/list.tiles";
     }
@@ -35,8 +38,11 @@ public class BoardController {
     }
 
     @GetMapping("/view")
-    public String view(Model m) {
+    public String view(Model m, String bno) {
+        logger.info("board/list 호출!!");
+        Board board = bsrv.readOneBoard(bno);
 
+        m.addAttribute("board",board);
 
         return "board/view.tiles";
     }
