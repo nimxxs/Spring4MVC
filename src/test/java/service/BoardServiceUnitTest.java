@@ -36,10 +36,17 @@ public class BoardServiceUnitTest {
     }
     @Test
     public void readOneBoard() throws Exception {
-        String bno = "450";
+        String bno = "300";
         Board result = bsrv.readOneBoard(bno);
 
         assertNotNull(result);
         System.out.println(result);
+    }
+    @Test
+    @Transactional
+    public void saveBoard() throws Exception {
+        Board bd = new Board(null,"테스트","abc123", null, null, "냉무");
+
+        assertEquals(bsrv.saveBoard(bd), true);
     }
 }
